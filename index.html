@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Khan's Diet Plans | Personalized Diet Plans</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#080808;
+    color:white;
+}
+
+header{
+    background:linear-gradient(135deg,#000,#1a1a1a);
+    padding:30px;
+    text-align:center;
+    border-bottom:2px solid gold;
+}
+
+.logo{
+    color:gold;
+    font-size:35px;
+    font-weight:bold;
+}
+
+header p{
+    margin-top:10px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:gold;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:30px 20px;
+}
+
+h2{
+    text-align:center;
+    color:gold;
+    margin-bottom:25px;
+}
+
+.card{
+    background:#151515;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:20px;
+    margin:15px 0;
+    box-shadow:0 0 15px #000;
+}
+
+.card h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#ddd;
+    line-height:1.6;
+}
+
+.price{
+    color:#00ff99;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero span{
+    color:gold;
+}
+
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+
+.calculator{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid gold;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:none;
+}
+
+
+button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:12px 20px;
+    border-radius:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#aaa;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Khan's Diet Plans
+</div>
+
+<p>Apni body ke liye personalized diet plan hasil karein 🥗</p>
+
+<a class="btn" href="#plans">
+View Plans
+</a>
+
+</header>
+
+
+
+<div class="hero">
+
+<h1>
+Build Your <span>Dream Body</span>
+</h1>
+
+<p>
+Weight Loss | Muscle Gain | Healthy Lifestyle
+</p>
+
+<a class="btn" href="https://wa.me/923000000000">
+Order Diet Plan
+</a>
+
+</div>
+
+
+
+<section id="plans">
+
+<h2>Our Diet Plans</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>Fat Loss Plan 🔥</h3>
+
+<p>
+Extra fat kam karne ke liye calories control,
+healthy meals aur proper routine.
+</p>
+
+<div class="price">
+Rs. 999
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Muscle Gain Plan 💪</h3>
+
+<p>
+Muscle build karne ke liye protein rich diet,
+meal timing aur workout support.
+</p>
+
+<div class="price">
+Rs. 1299
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Personalized Premium Plan ⭐</h3>
+
+<p>
+Aapki age, weight, height aur goal ke hisab se
+custom diet plan.
+</p>
+
+<div class="price">
+Rs. 1999
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>Why Choose Us?</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+<h3>🥗 Custom Diet</h3>
+<p>
+Har person ke goal ke mutabiq plan.
+</p>
+</div>
+
+
+<div class="card">
+<h3>📱 Online Support</h3>
+<p>
+WhatsApp ke zariye guidance.
+</p>
+</div>
+
+
+<div class="card">
+<h3>💯 Simple Foods</h3>
+<p>
+Ghar ke affordable foods se planning.
+</p>
+</div>
+
+
+</div>
+
+</section><section>
+
+<h2>Body Calculators 📊</h2>
+
+<div class="grid">
+
+
+<div class="calculator">
+
+<h3>BMI Calculator</h3>
+
+<input id="height" placeholder="Height (cm)">
+
+<input id="weight" placeholder="Weight (kg)">
+
+<button onclick="bmi()">Calculate BMI</button>
+
+<p id="bmiResult"></p>
+
+</div>
+
+
+
+<div class="calculator">
+
+<h3>Water Intake 💧</h3>
+
+<input id="waterWeight" placeholder="Weight (kg)">
+
+<button onclick="water()">Calculate</button>
+
+<p id="waterResult"></p>
+
+</div>
+
+
+
+<div class="calculator">
+
+<h3>Protein Need 💪</h3>
+
+<input id="proteinWeight" placeholder="Weight (kg)">
+
+<button onclick="protein()">Calculate</button>
+
+<p id="proteinResult"></p>
+
+</div>
+
+
+
+<div class="calculator">
+
+<h3>Calories 🔥</h3>
+
+<input id="age" placeholder="Age">
+
+<input id="calWeight" placeholder="Weight (kg)">
+
+<input id="calHeight" placeholder="Height (cm)">
+
+<button onclick="calories()">Calculate</button>
+
+<p id="calResult"></p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>Order Your Diet Plan 📲</h2>
+
+
+<div class="card">
+
+<p>
+Apna personalized diet plan lene ke liye WhatsApp par contact karein.
+</p>
+
+
+<a class="btn" href="https://wa.me/923000000000">
+WhatsApp Now
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 Khan's Diet Plans  
+<br>
+Healthy Body • Healthy Life
+
+</footer>
+
+
+
+
+<script>
+
+
+function bmi(){
+
+let h=document.getElementById("height").value;
+let w=document.getElementById("weight").value;
+
+if(h && w){
+
+let result=w/((h/100)*(h/100));
+
+document.getElementById("bmiResult").innerHTML=
+"Your BMI: "+result.toFixed(1);
+
+}
+
+}
+
+
+
+function water(){
+
+let w=document.getElementById("waterWeight").value;
+
+if(w){
+
+let result=w*0.035;
+
+document.getElementById("waterResult").innerHTML=
+"Daily Water: "+result.toFixed(1)+" Liters";
+
+}
+
+}
+
+
+
+function protein(){
+
+let w=document.getElementById("proteinWeight").value;
+
+if(w){
+
+let result=w*1.6;
+
+document.getElementById("proteinResult").innerHTML=
+"Protein Need: "+result.toFixed(0)+" grams/day";
+
+}
+
+}
+
+
+
+function calories(){
+
+let age=document.getElementById("age").value;
+let weight=document.getElementById("calWeight").value;
+let height=document.getElementById("calHeight").value;
+
+
+if(age && weight && height){
+
+let result=10*weight+6.25*height-5*age+5;
+
+document.getElementById("calResult").innerHTML=
+"Approx Calories: "+result.toFixed(0)+" kcal/day";
+
+}
+
+}
+
+
+</script>
+
+
+</body>
+</html>
