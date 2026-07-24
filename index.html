@@ -18,17 +18,55 @@
 body{
     background:#080808;
     color:white;}
+    } 
  
- <!-- LOADING SCREEN -->
-</script>
+    /* ===== PREMIUM ANIMATIONS ===== */
 
-<header>  ← YE LINE ADD KARO
- <img src="Skull-logo.png" alt="Khan Diet Logo" width="80" style="margin-bottom:10px;">
- <header> <div class="logo">KHAN DIET PLANS</div>
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+header{.logo{
+    animation:fadeUp 1.5s ease;
+}
+
+.btn{
+    transition:all .3s ease;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px gold;
+}
+
+.card{
+    transition:.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px gold;
+    border-color:gold;
+}
+ </style>
+</head>
+<body>
+
+<header>
+  <img src="Skull-logo.png" alt="Khan Diet Logo" width="80" style="margin-bottom:10px;">
+  <div class="logo">KHAN DIET PLANS</div>
   <p>Healthy Meal Plans for You</p>
   <a href="https://wa.me/923152853533" class="btn" style="background:green; margin-top:15px;">Order on WhatsApp 03152853533</a>
 </header>
-    <style>
+
+<style>
 header{
     background:linear-gradient(135deg,#000,#1a1a1a);
     padding:30px;
