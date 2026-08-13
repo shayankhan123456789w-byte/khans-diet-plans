@@ -424,6 +424,55 @@ Ghar ke affordable foods se planning.
 
 </section><section>
 
+function water(){
+
+let w=document.getElementById("waterWeight").value;
+
+if(w){
+
+let result=w*0.035;
+
+document.getElementById("waterResult").innerHTML=
+"Daily Water: "+result.toFixed(1)+" Liters";
+
+}
+
+}
+
+
+
+function protein(){
+
+let w=document.getElementById("proteinWeight").value;
+
+if(w){
+
+let result=w*1.6;
+
+document.getElementById("proteinResult").innerHTML=
+"Protein Need: "+result.toFixed(0)+" grams/day";
+
+}
+
+}
+
+
+
+function calories(){
+
+let age=document.getElementById("age").value;
+let weight=document.getElementById("calWeight").value;
+let height=document.getElementById("calHeight").value;
+
+
+if(age && weight && height){
+
+let result=10*weight+6.25*height-5*age+5;
+
+document.getElementById("calResult").innerHTML=
+"Approx Calories: "+result.toFixed(0)+" kcal/day";
+
+}
 <h2>Body Calculators 📊</h2>
 
 <div class="grid">
@@ -552,55 +601,6 @@ document.getElementById("bmiResult").innerHTML=
 
 
 
-function water(){
-
-let w=document.getElementById("waterWeight").value;
-
-if(w){
-
-let result=w*0.035;
-
-document.getElementById("waterResult").innerHTML=
-"Daily Water: "+result.toFixed(1)+" Liters";
-
-}
-
-}
-
-
-
-function protein(){
-
-let w=document.getElementById("proteinWeight").value;
-
-if(w){
-
-let result=w*1.6;
-
-document.getElementById("proteinResult").innerHTML=
-"Protein Need: "+result.toFixed(0)+" grams/day";
-
-}
-
-}
-
-
-
-function calories(){
-
-let age=document.getElementById("age").value;
-let weight=document.getElementById("calWeight").value;
-let height=document.getElementById("calHeight").value;
-
-
-if(age && weight && height){
-
-let result=10*weight+6.25*height-5*age+5;
-
-document.getElementById("calResult").innerHTML=
-"Approx Calories: "+result.toFixed(0)+" kcal/day";
-
-}
 
  <h2 style="text-align:center;color:#FFD700;margin-top:40px;font-size:22px;">Real Transformations 💪</h2>
  <img src="file_0000014c.png" style="width:160px;height:200px;object-fit:cover;border-radius:10px;border:2px solid #FFD700;">
