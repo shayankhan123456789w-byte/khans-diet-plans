@@ -542,8 +542,56 @@ document.getElementById("calResult").innerHTML=
 </div>
 
 </section>
+544 </section>
 
-
+545 <script>
+546 function bmi(){
+547   let h=document.getElementById("height").value;
+548   let w=document.getElementById("weight").value;
+549   if(h && w){
+550     h = h/100;
+551     let result=w/(h*h);
+552     document.getElementById("bmiResult").innerHTML="Your BMI: "+result.toFixed(1);
+553   }else{
+554     document.getElementById("bmiResult").innerHTML="<span style='color:red'>Please enter Height and Weight</span>";
+555   }
+556 }
+557 
+558 function water(){
+559   let w=document.getElementById("waterWeight").value;
+560   if(w){
+561     let result=w*0.035;
+562     document.getElementById("waterResult").innerHTML="Daily Water: "+result.toFixed(2)+" Liters";
+563   }else{
+564     document.getElementById("waterResult").innerHTML="<span style='color:red'>Please enter Weight</span>";
+565   }
+566 }
+567 
+568 function protein(){
+569   let w=document.getElementById("proteinWeight").value;
+570   if(w){
+571     let result=w*2.2;
+572     document.getElementById("proteinResult").innerHTML="Protein Need: "+Math.round(result)+" grams/day";
+573   }else{
+574     document.getElementById("proteinResult").innerHTML="<span style='color:red'>Please enter Weight</span>";
+575   }
+576 }
+577 
+578 function calories(){
+579   let age=document.getElementById("age").value;
+580   let weight=document.getElementById("calWeight").value;
+581   let height=document.getElementById("calHeight").value;
+582   if(age && weight && height){
+583     let result=10*weight+6.25*height-5*age+5;
+584     document.getElementById("calResult").innerHTML="Approx Calories: "+Math.round(result)+" kcal/day";
+585   }else{
+586     document.getElementById("calResult").innerHTML="<span style='color:red'>Please fill all fields</span>";
+587   }
+588 }
+589 </script>
+590 
+591 <section>
+    
 
 <section>
 
