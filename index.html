@@ -66,7 +66,33 @@ style="margin-bottom:10px; animation: lightning 2s infinite;">}
  0%,100%{ filter: drop-shadow(0 0 10px gold); }
  50%{ filter: drop-shadow(0 0 30px gold) drop-shadow(0 0 50px white); }
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes glow {
+ 0%, 100% { text-shadow: 0 0 10px gold; }
+ 50% { text-shadow: 0 0 20px gold, 0 0 30px gold; }
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.gold-glow {
+  animation: glow 2s ease-in-out infinite;
+}
 </style>
  </style>
 </head>
@@ -280,6 +306,33 @@ footer{
     padding:20px;
     background:#000;
     color:#aaa;
+    @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+ 0%, 100% { text-shadow: 0 0 10px gold; }
+ 50% { text-shadow: 0 0 20px gold, 0 0 30px gold; }
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.gold-glow {
+  animation: glow 2s ease-in-out infinite;
+    }
 }
 
 
@@ -308,15 +361,15 @@ View Plans
 
 <div class="hero">
 
-<h1>
+<h1 class="hero-title gold-glow">
 Build Your <span>Dream Body</span>
-</h1>
+<h1>
 
-<p>
+<p class="hero-subtitle">
 Weight Loss | Muscle Gain | Healthy Lifestyle
 </p>
 
-<a class="btn" href="https://wa.me/923000000000">
+<a class="btn" href="https://wa.me/923152853533">
 Order Diet Plan
 </a>
 
@@ -535,7 +588,18 @@ document.getElementById("calResult").innerHTML=
 <button onclick="calories()">Calculate</button>
 
 <p id="calResult"></p>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.animation = "fadeInUp 0.8s ease-out";
+    }
+  });
+});
 
+document.querySelectorAll('.calculator,.card').forEach(el => {
+  observer.observe(el);
+});
+</script>
 </div>
 
 
