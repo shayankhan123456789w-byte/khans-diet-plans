@@ -6,4 +6,4 @@
 - 100% Original Protein - 
 - Order: WhatsApp 0315-2853533
 
-As Promoted by Ambassadors 
+
