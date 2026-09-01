@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout - Khan's Diet Plan</title>
+<style>
+body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:20px}
+input,button{padding:12px;margin:10px;border-radius:8px;border:none}
+button{background:#FFD700;color:#000;font-weight:bold;cursor:pointer}
+.box{background:#111;border:2px solid #FFD700;padding:20px;border-radius:12px;max-width:400px;margin:auto}
+/* Animation ke liye */
+.box {
+  animation: fadeInUp 0.8s ease;
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+<script>
+ 
+  function applyCoupon(){
+  let code = document.getElementById('coupon').value;
+  let price = 999; // Fat Loss Plan price
+  if(code.toUpperCase() == 'KHAN10'){
+    price = price - 100; // 100 off
+    document.getElementById('msg').innerText = "Coupon lag gaya! 100 Rs off";
+  }
+  document.getElementById('total').innerText = price;
+ document.getElementById('whatsappLink').href = "https://wa.me/923152855333?text=Order%20Fat%20Loss%20Plan%20Rs." + price;
+  }
+ 
+}
+</script>
+</head>
+<body>
+<div class="box">
+<h2>Order Your Diet Plan</h2>
+<p>Plan: Fat Loss Plan - Rs. <span id="total">999</span></p>
+
+<input type="text" id="name" placeholder="Apna Naam"><br>
+<input type="text" id="whatsapp" placeholder="WhatsApp Number"><br>
+<input type="text" id="coupon" placeholder="Discount Code">
+<button onclick="applyCoupon()">Apply</button>
+<p id="msg" style="color:#0f0"></p>
+
+ <a id="whatsappLink" href="https://wa.me/923152855333?text=Order%20Fat%20Loss%20Plan%20Rs.999" target="_blank">
+<button>WhatsApp pe Order Karo</button>
+</a>
+
+<p>Payment: EasyPaisa 0315-2855333<br>Name: MUHAMMAD AMIR KHAN</p>
+</div>
+</body>
+</html>
