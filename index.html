@@ -87,6 +87,26 @@ header{.logo{
 .gold-glow {
   animation: glow 2s ease-in-out infinite;
 }
+/* VIDEO ANIMATION */
+.video-animate {
+  animation: videoPop 1.5s ease-out, glow 3s infinite;
+  transition: transform 0.3s ease;
+}
+
+.video-animate:hover {
+  transform: scale(1.02);
+}
+
+@keyframes videoPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}       
 </style>
  </style>
 </head>
@@ -98,6 +118,28 @@ header{.logo{
   <p>Healthy Meal Plans for You</p>
   <a href="https://www.tiktok.com/@dawar7940" class="btn" style="background:green; margin-top:15px;">Order on TikTok @dawar7940</a>
 </header>
+<!-- ===== SECTION: TRANSFORMATION VIDEO ===== -->
+<section style="padding:60px 20px; text-align:center; background:#0a0a0a;">
+  
+  <h2 style="color:gold; font-size:35px; margin-bottom:20px; animation:glow 2s infinite;">
+    BEFORE vs AFTER 🔥
+  </h2>
+  
+   <video class="video-animate" width="90%" controls autoplay muted loop style="border-radius:20px; box-shadow:0 0 30px gold; max-width:700px;">
+    <source src="khan-diet-result.mp4" type="video/mp4">
+  </video>
+  
+  <p style="color:#ccc; font-size:18px; margin-top:20px;">
+    Now after following proper diet plan from <b style="color:gold;">Khan's Diet Plans</b>
+  </p>
+  
+  <a href="https://www.tiktok.com/@dawar7940" class="btn" style="display:inline-block; margin-top:20px; padding:14px 35px; background:gold; color:black; text-decoration:none; border-radius:10px; font-weight:bold; font-size:18px;">
+    Get Your Custom Plan Now
+  </a>
+
+</section>
+
+<!-- SECTION 1: KHAN'S DIET PLAN IN GYM -->
 <!-- SECTION 1: KHAN'S DIET PLAN IN GYM -->
 <section style="padding:40px 20px; text-align:center; background:#0a0a0a;">
   <img src="gym-pic1.jpg" alt="Khan Diet Plan Academy" 
