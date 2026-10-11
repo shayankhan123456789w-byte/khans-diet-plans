@@ -733,7 +733,59 @@ WhatsApp Now
 
 
 </section>
+<!-- ===== PUMP-X SYCO ANIMATED SHOWCASE ===== -->
+<style>
+  @keyframes floatJar {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-12px) scale(1.02); }
+    100% { transform: translateY(0px) scale(1); }
+  }
+  @keyframes glowPulse {
+    0% { box-shadow: 0 0 20px #00aaff, 0 0 40px #0066ff; }
+    50% { box-shadow: 0 0 35px #00aaff, 0 0 65px #0066ff; }
+    100% { box-shadow: 0 0 20px #00aaff, 0 0 40px #0066ff; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .pump-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: radial-gradient(circle at center, #0a1a2f 0%, #000 70%);
+    animation: fadeUp 1s ease-out;
+  }
+  .pump-img {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 25px;
+    border: 3px solid #00aaff;
+    animation: floatJar 3s ease-in-out infinite, glowPulse 2s ease-in-out infinite, fadeUp 1.2s ease-out;
+    transition: transform 0.4s;
+  }
+  .pump-img:hover {
+    transform: scale(1.05) rotate(-1deg);
+  }
+</style>
 
+<section class="pump-section">
+  <h2 style="color: #00aaff; font-size: 42px; font-weight: 900; text-shadow: 0 0 15px #00aaff; margin-bottom: 10px;">
+    ⚡ KHAN'S PUMP-X SYCO ⚡
+  </h2>
+  <p style="color: gold; font-size: 20px; font-weight: bold; letter-spacing: 2px; margin-bottom: 30px;">BLUEBERRY FLAVOUR | 20 SERVINGS | 200g</p>
+
+  <img src="pump-x-poster.jpg" alt="PUMP-X SYCO" class="pump-img">
+
+  <div style="margin-top: 35px;">
+    <h3 style="color: #fff; font-size: 24px;">UNLEASH THE BEAST INSIDE</h3>
+    <p style="color: #aaa; max-width: 600px; margin: 15px auto; font-size: 17px;">Gym me asli pump chahiye? PUMP-X SYCO se veins phat jayengi, energy next level!</p>
+    
+    <a href="https://wa.me/923152853533?text=Salam%20Khan%20Bhai%20PUMP-X%20SYCO%20Order%20Karna%20Hai" 
+       style="display:inline-block; margin-top:25px; padding:16px 40px; background: linear-gradient(90deg, #00aaff, #0066ff); color:#fff; font-weight:900; font-size:19px; border-radius:50px; text-decoration:none; box-shadow: 0 0 20px #00aaff; animation: glowPulse 2s infinite;">
+       🔥 ORDER NOW ON WHATSAPP 🔥
+    </a>
+  </div>
+</section>
 
 
 <footer>
